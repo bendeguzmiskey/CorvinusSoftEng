@@ -55,5 +55,11 @@ namespace _2_het
         {
             LoadData();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+                TermekKategoriaForm termekKategoriaForm = new TermekKategoriaForm();
+                termekKategoriaForm.ShowDialog();
+        }
     }
 }

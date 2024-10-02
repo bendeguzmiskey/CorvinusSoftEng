@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ew7ai2\\Desktop\\final_projekt\\2_het\\2_het\\2_het.csproj": {}
+    "C:\\Users\\ew7ai2\\Source\\Repos\\szoftver_2\\2_het\\2_het\\2_het.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ew7ai2\\Desktop\\final_projekt\\2_het\\2_het\\2_het.csproj": {
+    "C:\\Users\\ew7ai2\\Source\\Repos\\szoftver_2\\2_het\\2_het\\2_het.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ew7ai2\\Desktop\\final_projekt\\2_het\\2_het\\2_het.csproj",
+        "projectUniqueName": "C:\\Users\\ew7ai2\\Source\\Repos\\szoftver_2\\2_het\\2_het\\2_het.csproj",
         "projectName": "2_het",
-        "projectPath": "C:\\Users\\ew7ai2\\Desktop\\final_projekt\\2_het\\2_het\\2_het.csproj",
+        "projectPath": "C:\\Users\\ew7ai2\\Source\\Repos\\szoftver_2\\2_het\\2_het\\2_het.csproj",
         "packagesPath": "C:\\Users\\ew7ai2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ew7ai2\\Desktop\\final_projekt\\2_het\\2_het\\obj\\",
+        "outputPath": "C:\\Users\\ew7ai2\\Source\\Repos\\szoftver_2\\2_het\\2_het\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ew7ai2\\AppData\\Roaming\\NuGet\\NuGet.Config",

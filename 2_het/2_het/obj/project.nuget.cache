@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kJNsmQQH8leHPEWXl3ChBfmkiyAK8W/Il6WtEV+P8LGc9a40WuLCAb5qy8HM4uFynmOX8ZdZdRxzlIqfT4K9og==",
+  "dgSpecHash": "NK2P8JCKybr/BtMKlvBJAvm+Of5A1qsv+x/cCVIT1rvpbqwbaeF5k4ExKcaLbv/KXWKwKaQL5/OLmFlw+oZrkg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ew7ai2\\Desktop\\final_projekt\\2_het\\2_het\\2_het.csproj",
+  "projectFilePath": "C:\\Users\\ew7ai2\\Source\\Repos\\szoftver_2\\2_het\\2_het\\2_het.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ew7ai2\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ew7ai2\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
