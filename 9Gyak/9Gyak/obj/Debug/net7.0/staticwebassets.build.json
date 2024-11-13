@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "L4TRQnC3yLKVWGix2/z32m5TP7Fo4/Dtam1sPCraY84=",
+  "Source": "9Gyak",
+  "BasePath": "_content/9Gyak",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "9Gyak\\wwwroot",
+      "Source": "9Gyak",
+      "ContentRoot": "C:\\Users\\ew7ai2\\source\\repos\\szoftver_2\\9Gyak\\9Gyak\\wwwroot\\",
+      "BasePath": "_content/9Gyak",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\ew7ai2\\source\\repos\\szoftver_2\\9Gyak\\9Gyak\\wwwroot\\index.html",
+      "SourceId": "9Gyak",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ew7ai2\\source\\repos\\szoftver_2\\9Gyak\\9Gyak\\wwwroot\\",
+      "BasePath": "_content/9Gyak",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}

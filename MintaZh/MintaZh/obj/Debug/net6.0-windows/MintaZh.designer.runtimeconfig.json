@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\bende\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\bende\\.nuget\\packages"
+      "C:\\Users\\ew7ai2\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ew7ai2\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

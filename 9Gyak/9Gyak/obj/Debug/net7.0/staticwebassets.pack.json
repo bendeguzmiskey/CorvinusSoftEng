@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ew7ai2\\source\\repos\\szoftver_2\\9Gyak\\9Gyak\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.9Gyak.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.9Gyak.props",
+      "PackagePath": "build\\9Gyak.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.9Gyak.props",
+      "PackagePath": "buildMultiTargeting\\9Gyak.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.9Gyak.props",
+      "PackagePath": "buildTransitive\\9Gyak.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
