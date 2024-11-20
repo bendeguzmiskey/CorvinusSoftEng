@@ -6,5 +6,79 @@
 </head>
 <body>
     Hello world 🤩
+    <script>
+        fetch("api/jokes")
+            .then(r => r.json())
+            .then(o => {
+                console.log("Megérkezett");
+                console.log(o); // Log the array of jokes
+
+                var gomb = document.createElement("button");
+                gomb.innerText = "Show Jokes"; // Button text
+                document.body.appendChild(gomb); // Add button to the document
+
+                var jokediv = document.createElement("div");
+                document.body.appendChild(jokediv); // Add joke div to the document
+
+                gomb.addEventListener("click", () => {
+                    // Group jokes into rows of three
+                    let rows = [];
+                    for (let i = 0; i < o.length; i += 3) {
+                        rows.push(o.slice(i, i + 3)); // Group every three jokes
+                    }
+
+                    // Generate HTML for each row
+                    jokediv.innerHTML = rows.map((row, rowIndex) => {
+                        return `
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                        ${row.map((joke, index) => {
+                            const jokeIndex = rowIndex * 3 + index;
+                            return `
+                                <div style="flex: 1; border: 1px solid #ccc; margin: 5px; padding: 10px;" id="joke-${jokeIndex}">
+                                    <p><strong>jokeText:</strong> ${joke.jokeText}</p>
+                                    <p><strong>jokeSk:</strong> ${joke.jokeSk}</p>
+                                    <p><strong>upVotes:</strong> <span id="upvotes-${jokeIndex}">${joke.upVotes}</span></p>
+                                    <p><strong>downVotes:</strong> <span id="downvotes-${jokeIndex}">${joke.downVotes}</span></p>
+                                    <button onclick="upvote(${jokeIndex})">Upvote</button>
+                                    <button onclick="downvote(${jokeIndex})">Downvote</button>
+                                    <button onclick="deleteJoke(${jokeIndex})">Delete</button>
+                                </div>
+                            `;
+                        }).join("")}
+                    </div>
+                `;
+                    }).join("");
+
+                    // Add functions for upvote and downvote
+                    window.upvote = (index) => {
+                        o[index].upVotes++;
+                        document.getElementById(`upvotes-${index}`).innerText = o[index].upVotes;
+
+                        // Change background color to green
+                        const jokeDiv = document.getElementById(`joke-${index}`);
+                        jokeDiv.style.backgroundColor = 'green';
+                    };
+
+                    window.downvote = (index) => {
+                        o[index].downVotes++;
+                        document.getElementById(`downvotes-${index}`).innerText = o[index].downVotes;
+
+                        // Change background color to red
+                        const jokeDiv = document.getElementById(`joke-${index}`);
+                        jokeDiv.style.backgroundColor = 'red';
+                    };
+
+                    // Function to delete a joke
+                    window.deleteJoke = (index) => {
+                        o.splice(index, 1); // Remove joke from the array
+                        document.getElementById(`joke-${index}`).remove(); // Remove joke from the DOM
+                    };
+                });
+            })
+            .catch(error => {
+                console.error("Error fetching jokes:", error);
+            });
+
+    </script>
 </body>
 </html>
