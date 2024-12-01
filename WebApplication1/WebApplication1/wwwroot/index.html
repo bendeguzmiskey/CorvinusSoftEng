@@ -1,13 +1,103 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Könyvkezelő</title>
+    <script>
+        // Könyvek betöltése és megjelenítése
+        async function loadBooks() {
+            const response = await fetch('api/values');
+            const books = await response.json();
+            const tableBody = document.getElementById('book-table-body');
+            tableBody.innerHTML = ''; // Törli az előző adatokat
+
+            books.forEach(book => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                        <td>${book.id}</td>
+                        <td>${book.title}</td>
+                        <td>${book.author}</td>
+                        <td>${book.year}</td>
+                        <td>${book.genre}</td>
+                        <td>${book.isAvailable ? 'Igen' : 'Nem'}</td>
+                    `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Új könyv hozzáadása
+        async function addBook() {
+            const title = document.getElementById('new-title').value;
+            const author = document.getElementById('new-author').value;
+            const year = parseInt(document.getElementById('new-year').value, 10);
+            const genre = document.getElementById('new-genre').value;
+            const isAvailable = document.getElementById('new-is-available').checked;
+
+            const response = await fetch('api/values', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ title, author, year, genre, isAvailable })
+            });
+
+            if (response.ok) {
+                await loadBooks();
+            } else {
+                alert('Nem sikerült hozzáadni a könyvet.');
+            }
+        }
+
+        // Könyv törlése azonosító alapján
+        async function deleteBook() {
+            const id = parseInt(document.getElementById('delete-id').value, 10);
+
+            const response = await fetch(`api/values/${id}`, { method: 'DELETE' });
+
+            if (response.ok) {
+                await loadBooks();
+            } else {
+                alert('Nem sikerült törölni a könyvet.');
+            }
+        }
+    </script>
 </head>
 <body>
-    Hello world!
-</body>
-<script>
+    <h1>Könyvkezelő</h1>
 
-</script>
+    <!-- Könyvek táblázata -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Cím</th>
+                <th>Szerző</th>
+                <th>Év</th>
+                <th>Műfaj</th>
+                <th>Elérhető?</th>
+            </tr>
+        </thead>
+        <tbody id="book-table-body"></tbody>
+    </table>
+
+    <!-- Új könyv hozzáadása -->
+    <h2>Új könyv hozzáadása</h2>
+    <input type="text" id="new-title" placeholder="Cím">
+    <input type="text" id="new-author" placeholder="Szerző">
+    <input type="number" id="new-year" placeholder="Év">
+    <input type="text" id="new-genre" placeholder="Műfaj">
+    <label>
+        <input type="checkbox" id="new-is-available"> Elérhető
+    </label>
+    <button onclick="addBook()">Hozzáadás</button>
+
+    <!-- Könyv törlése -->
+    <h2>Könyv törlése</h2>
+    <input type="number" id="delete-id" placeholder="Azonosító">
+    <button onclick="deleteBook()">Törlés</button>
+
+    <script>
+        // Az oldal betöltésekor megjeleníti a könyveket
+        window.onload = loadBooks;
+    </script>
+</body>
 </html>
