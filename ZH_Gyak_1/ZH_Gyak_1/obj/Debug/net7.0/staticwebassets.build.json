@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "lWTxATRTY6T3d+csAT5leI/GCuGli/HsWekVBoRbyy8=",
+  "Source": "ZH_Gyak_1",
+  "BasePath": "_content/ZH_Gyak_1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ZH_Gyak_1\\wwwroot",
+      "Source": "ZH_Gyak_1",
+      "ContentRoot": "C:\\git\\szoftver_2\\ZH_Gyak_1\\ZH_Gyak_1\\wwwroot\\",
+      "BasePath": "_content/ZH_Gyak_1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\git\\szoftver_2\\ZH_Gyak_1\\ZH_Gyak_1\\wwwroot\\index.html",
+      "SourceId": "ZH_Gyak_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\git\\szoftver_2\\ZH_Gyak_1\\ZH_Gyak_1\\wwwroot\\",
+      "BasePath": "_content/ZH_Gyak_1",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}

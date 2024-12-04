@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Könyvek</h1>
+    <p><button id="megjelenitoGomb">Összes könyv megjelenítése </button></p>
+    <p><input id="cim" type="text" placeholder="Add meg a konyv cimet" /></p>
+    <p><input id="szerzo" type="text" placeholder="Add meg a szerzo nevet" /></p>
+    <p><input id="ev" type="text" placeholder="Add meg az evet" /></p>
+    <p><input id="mufaj" type="text" placeholder="Add meg a mufajt" /></p>
+    <p><input id="elerheto" type="checkbox" placeholder="Elerheto-e" /></p>
+    <p><button id="rogzitoGomb">Új könyv rögzítés </button></p>
+    <p><input id="torol" type="text" placeholder="Add meg a torlendo kony idjat" /></p>
+    <p><button id="torloGomb">Könyv törlése</button></p>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Cím</th>
+                <th>Szerző</th>
+                <th>Kiadás Éve</th>
+                <th>Műfaj</th>
+                <th>Elérhetőség</th>
+            </tr>
+        </thead>
+        <tbody id="tb_konyvek">
+        </tbody>
+    </table>
+
+    <script>
+        document.getElementById("rogzitoGomb").addEventListener("click", _ => {
+            var bookdata = {
+                "title": document.getElementById("cim").value,
+                "author": document.getElementById("szerzo").value,
+                "year": document.getElementById("ev").value,
+                "genre": document.getElementById("mufaj").value,
+                "isAvailable": document.getElementById("elerheto").checked == "Ok"
+            }
+
+            fetch("api/book", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(bookdata)
+            }).then(v => {
+                if (v.Ok) {
+                    console.log("Siker")
+                }
+                else {
+                    console.log("Nem sikerult")
+                }
+            });
+        });
+        document.getElementById("torloGomb").addEventListener("click", () => {
+            const bookId = document.getElementById("torol").value.trim();
+
+            if (bookId) {
+                fetch(`api/book/${bookId}`, {
+                    method: "DELETE"
+                });
+            };
+        });
+        document.getElementById("megjelenitoGomb").addEventListener("click", () => {
+            fetch("api/book").then(v => v.json()).then(o => {
+                console.log(o)
+
+                var tbody = document.getElementById("tb_konyvek")
+                tbody.innerHTML = '';
+                o.forEach(e => {
+                    var tr = document.createElement("tr")
+                    tr.innerHTML = `
+                        <td>${e.id}</td>
+                        <td>${e.title}</td>
+                        <td>${e.author}</td>
+                        <td>${e.year}</td>
+                        <td>${e.genre}</td>
+                        <td>${e.isAvailable}</td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>

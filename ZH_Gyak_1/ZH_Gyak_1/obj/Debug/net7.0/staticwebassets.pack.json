@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\git\\szoftver_2\\ZH_Gyak_1\\ZH_Gyak_1\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ZH_Gyak_1.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.ZH_Gyak_1.props",
+      "PackagePath": "build\\ZH_Gyak_1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.ZH_Gyak_1.props",
+      "PackagePath": "buildMultiTargeting\\ZH_Gyak_1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.ZH_Gyak_1.props",
+      "PackagePath": "buildTransitive\\ZH_Gyak_1.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

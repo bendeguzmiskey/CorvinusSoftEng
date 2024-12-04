@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("elso_feladat")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f2617cbf67378fe871b03aaeaf6988c2998b78e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01376bcd6f5389edcd42dd4c5f1437a3fbd66c7b")]
 [assembly: System.Reflection.AssemblyProductAttribute("elso_feladat")]
 [assembly: System.Reflection.AssemblyTitleAttribute("elso_feladat")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
