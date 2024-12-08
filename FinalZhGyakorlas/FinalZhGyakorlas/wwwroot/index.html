@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>F1 Drivers</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>F1 Drivers</h1>
+    <p><button id="megjelenitoGomb">Show All Drivers</button></p>
+    <p><input id="name" type="text" placeholder="Enter Driver Name" /></p>
+    <p><input id="team" type="text" placeholder="Enter Team Name" /></p>
+    <p><input id="age" type="number" placeholder="Enter Age" /></p>
+    <p><input id="wins" type="number" placeholder="Enter Wins" /></p>
+    <p>
+        <label>
+            <input id="worldChampion" type="checkbox" /> World Champion
+        </label>
+    </p>
+    <p><button id="rogzitoGomb">Add New Driver</button></p>
+    <p><input id="torol" type="number" placeholder="Enter Driver ID to Delete" /></p>
+    <p><button id="torloGomb">Delete Driver</button></p>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Team</th>
+                <th>Age</th>
+                <th>Wins</th>
+                <th>World Champion</th>
+            </tr>
+        </thead>
+        <tbody id="tb_drivers">
+        </tbody>
+    </table>
+
+    <script>
+        document.getElementById("rogzitoGomb").addEventListener("click", () => {
+            const driverData = {
+                name: document.getElementById("name").value,
+                team: document.getElementById("team").value,
+                age: parseInt(document.getElementById("age").value, 10),
+                wins: parseInt(document.getElementById("wins").value, 10),
+                worldChampion: document.getElementById("worldChampion").checked
+            };
+
+            fetch("api/f1", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(driverData)
+            }).then(response => {
+                if (response.ok) {
+                    console.log("Driver added successfully");
+                } else {
+                    console.log("Failed to add driver");
+                }
+            });
+        });
+
+        document.getElementById("torloGomb").addEventListener("click", () => {
+            const driverId = document.getElementById("torol").value.trim();
+
+            if (driverId) {
+                fetch(`api/f1/${driverId}`, {
+                    method: "DELETE"
+                }).then(response => {
+                    if (response.ok) {
+                        console.log("Driver deleted successfully");
+                    } else {
+                        console.log("Failed to delete driver");
+                    }
+                });
+            }
+        });
+
+        document.getElementById("megjelenitoGomb").addEventListener("click", () => {
+            fetch("api/f1")
+                .then(response => response.json())
+                .then(drivers => {
+                    const tbody = document.getElementById("tb_drivers");
+                    tbody.innerHTML = '';
+                    drivers.forEach(driver => {
+                        const tr = document.createElement("tr");
+                        tr.innerHTML = `
+                            <td>${driver.driverId}</td>
+                            <td>${driver.name}</td>
+                            <td>${driver.team}</td>
+                            <td>${driver.age}</td>
+                            <td>${driver.wins}</td>
+                            <td>${driver.worldChampion ? 'Yes' : 'No'}</td>
+                        `;
+                        tbody.appendChild(tr);
+                    });
+                });
+        });
+    </script>
+</body>
+</html>

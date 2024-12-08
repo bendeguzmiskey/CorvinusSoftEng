@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\git\\szoftver_2\\FinalZhGyakorlas\\FinalZhGyakorlas\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.FinalZhGyakorlas.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.FinalZhGyakorlas.props",
+      "PackagePath": "build\\FinalZhGyakorlas.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.FinalZhGyakorlas.props",
+      "PackagePath": "buildMultiTargeting\\FinalZhGyakorlas.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.FinalZhGyakorlas.props",
+      "PackagePath": "buildTransitive\\FinalZhGyakorlas.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

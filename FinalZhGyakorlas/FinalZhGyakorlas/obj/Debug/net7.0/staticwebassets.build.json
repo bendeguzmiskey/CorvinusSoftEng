@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "mMPzsX0XFdG34LoolhLp8IbWwRsp/E8iHn0GUi1PV5U=",
+  "Source": "FinalZhGyakorlas",
+  "BasePath": "_content/FinalZhGyakorlas",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "FinalZhGyakorlas\\wwwroot",
+      "Source": "FinalZhGyakorlas",
+      "ContentRoot": "C:\\git\\szoftver_2\\FinalZhGyakorlas\\FinalZhGyakorlas\\wwwroot\\",
+      "BasePath": "_content/FinalZhGyakorlas",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\git\\szoftver_2\\FinalZhGyakorlas\\FinalZhGyakorlas\\wwwroot\\index.html",
+      "SourceId": "FinalZhGyakorlas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\git\\szoftver_2\\FinalZhGyakorlas\\FinalZhGyakorlas\\wwwroot\\",
+      "BasePath": "_content/FinalZhGyakorlas",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}
