@@ -3430,11 +3430,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\git\\szoftver_2\\FinalZhGyakorlas\\FinalZhGyakorlas\\FinalZhGyakorlas.csproj",
+      "projectUniqueName": "C:\\git\\CorvinusSoftEng\\FinalZhGyakorlas\\FinalZhGyakorlas\\FinalZhGyakorlas.csproj",
       "projectName": "FinalZhGyakorlas",
-      "projectPath": "C:\\git\\szoftver_2\\FinalZhGyakorlas\\FinalZhGyakorlas\\FinalZhGyakorlas.csproj",
+      "projectPath": "C:\\git\\CorvinusSoftEng\\FinalZhGyakorlas\\FinalZhGyakorlas\\FinalZhGyakorlas.csproj",
       "packagesPath": "C:\\Users\\bende\\.nuget\\packages\\",
-      "outputPath": "C:\\git\\szoftver_2\\FinalZhGyakorlas\\FinalZhGyakorlas\\obj\\",
+      "outputPath": "C:\\git\\CorvinusSoftEng\\FinalZhGyakorlas\\FinalZhGyakorlas\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bende\\AppData\\Roaming\\NuGet\\NuGet.Config",

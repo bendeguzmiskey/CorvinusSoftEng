@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mMPzsX0XFdG34LoolhLp8IbWwRsp/E8iHn0GUi1PV5U=",
+  "Hash": "Oom4e5MqAtQ/vaA52cOGQvzyacGzSUZXiTp5tQf9ofI=",
   "Source": "FinalZhGyakorlas",
   "BasePath": "_content/FinalZhGyakorlas",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "FinalZhGyakorlas\\wwwroot",
       "Source": "FinalZhGyakorlas",
-      "ContentRoot": "C:\\git\\szoftver_2\\FinalZhGyakorlas\\FinalZhGyakorlas\\wwwroot\\",
+      "ContentRoot": "C:\\git\\CorvinusSoftEng\\FinalZhGyakorlas\\FinalZhGyakorlas\\wwwroot\\",
       "BasePath": "_content/FinalZhGyakorlas",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\git\\szoftver_2\\FinalZhGyakorlas\\FinalZhGyakorlas\\wwwroot\\index.html",
+      "Identity": "C:\\git\\CorvinusSoftEng\\FinalZhGyakorlas\\FinalZhGyakorlas\\wwwroot\\index.html",
       "SourceId": "FinalZhGyakorlas",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\git\\szoftver_2\\FinalZhGyakorlas\\FinalZhGyakorlas\\wwwroot\\",
+      "ContentRoot": "C:\\git\\CorvinusSoftEng\\FinalZhGyakorlas\\FinalZhGyakorlas\\wwwroot\\",
       "BasePath": "_content/FinalZhGyakorlas",
       "RelativePath": "index.html",
       "AssetKind": "All",

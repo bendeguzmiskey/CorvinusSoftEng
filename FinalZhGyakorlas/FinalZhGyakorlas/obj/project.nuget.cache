@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1jyCtTWq/lEfXEKZd8TzR2rJdVBXCjUmI6mIgDyITr/KYv4GXGAgAx+XCzI4cOgDc8Gh0fITizwqzk4ZbE4low==",
+  "dgSpecHash": "FjErT3UQJUOxbvz/EmfsYKpskFvI6Pn09jVE32Q94dTaK8UysBZP1/2WpM41zlWlqvDRoMB/9pcFuQPSMY/Dhw==",
   "success": true,
-  "projectFilePath": "C:\\git\\szoftver_2\\FinalZhGyakorlas\\FinalZhGyakorlas\\FinalZhGyakorlas.csproj",
+  "projectFilePath": "C:\\git\\CorvinusSoftEng\\FinalZhGyakorlas\\FinalZhGyakorlas\\FinalZhGyakorlas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bende\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\bende\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
